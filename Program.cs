@@ -10,26 +10,25 @@
 //         }
 //     }
 // }
-
-Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-Console.WriteLine("--------------------------------------------");
-Console.WriteLine();
+Main();
+void Main()
+{
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    Console.WriteLine("--------------------------------------------");
+    Console.WriteLine();
 
 //This is where we are invoking our Moose Functions!
 
 //What the moose says for intorpolation. This is our MooseSays Functions
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
+    MooseSays("H I, I'M  E N T H U S I A S T I C !");
+    MooseSays("I really am enthusiastic");
 
 // MooseAsks Functions
-bool isTrue = MooseAsks("Is Canada real?");
-if (isTrue) 
-{
-    MooseSays("YAAAAAY!!!!!");
-}
-else
-{
-    MooseSays("Oh Well atleast I can dream of it being real!!!");
+//This will ask the first functions question then more on to the next after the answere of the first.
+    CanadaQuestion();
+    EnthusiasticQuestion();
+    LoveCSharpQuestion();
+    SecretQuestion();
 }
 
 
@@ -88,5 +87,56 @@ bool MooseAsks(string question)
     else
     {
         return false;
+    }
+}
+
+void CanadaQuestion()
+{
+    bool isTrue = MooseAsks("Is Canada real?");
+    if (isTrue) 
+    {
+        MooseSays("YAAAAAY!!!!!");
+    }
+    else
+    {
+        MooseSays("Oh Well atleast I can dream of it being real!!!");
+    }
+}
+void EnthusiasticQuestion()
+{
+    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
+    if (isEnthusiastic)
+    {
+        MooseSays("Yay!");
+    }
+    else
+    {
+        MooseSays("You should try it!");
+    }
+}
+
+void LoveCSharpQuestion()
+{
+    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
+    if (doesLoveCSharp)
+    {
+        MooseSays("Good job sucking up to your instructor!");
+    }
+    else
+    {
+        MooseSays("You will...oh, yes, you will...");
+    }
+}
+
+void SecretQuestion()
+{
+    bool wantsSecret = MooseAsks("Do you want to know a secret?");
+    if (wantsSecret)
+    {
+        MooseSays("ME TOO!!!! I love secrets...tell me one!");
+    }
+    else
+    {
+        MooseSays("Oh, no...secrets are the best, I love to share them!");
     }
 }
