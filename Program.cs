@@ -78,6 +78,8 @@ bool MooseAsks(string question)
     while (answer != "y" && answer != "n")
     {
         Console.Write($"{question} (Y/N): ");
+        //Eviroment.Exit(0); Will allow you to close the application whenever you just push the enter key instead or a y or n.
+        Environment.Exit(0);
         answer = Console.ReadLine().ToLower();
     }
 
