@@ -29,6 +29,7 @@ void Main()
     EnthusiasticQuestion();
     LoveCSharpQuestion();
     SecretQuestion();
+    HockeyQuestion();
 }
 
 
@@ -138,5 +139,18 @@ void SecretQuestion()
     else
     {
         MooseSays("Oh, no...secrets are the best, I love to share them!");
+    }
+}
+
+void HockeyQuestion()
+{
+    bool playHockey = MooseAsks("Can a moose like myself play hockey with humans?");
+    if (playHockey)
+    {
+        MooseSays("Amazing! I dont need skates I have Hooves!");
+    }
+    else
+    {
+        MooseSays("Aw man, I guess that is a good thing, because I weigh alot more than a human I would knock you over easy.");
     }
 }
